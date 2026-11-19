@@ -30,5 +30,3 @@ A comprehensive, enterprise-grade Inventory and Order Management System built wi
 
 This repository contains the application source code (controllers, models, services, migrations, views) of a client project deployed to production. Laravel scaffolding files (composer.json, artisan, package.json, .env.example) are not included, so it is not intended to be run directly from this repo.
 - **Frontend:** Blade Components, Tailwind CSS
-
-ore Solutions.
