@@ -28,4 +28,15 @@ A comprehensive, enterprise-grade Inventory and Order Management System built wi
 
 ## Note
 
-This repository contains the application source code (controllers, models, services, migrations, views) of a client project deployed to production. Laravel scaffolding files (composer.json, artisan, package.json, .env.example) are not included, so it is not intended to be run directly from this repo.
+This is the application source of a client project deployed to production
+(Laravel scaffolding such as `composer.json` and `artisan` is intentionally
+not included). It is shared for code review, not as a ready-to-run package.
+
+### If you want to run it
+1. Create a fresh Laravel project and install Laravel Breeze, `spatie/laravel-permission` and `barryvdh/laravel-dompdf`.
+2. Copy this repo's `app/`, `routes/`, `resources/`, `database/` and `config/` folders over the fresh project.
+3. Set up MySQL in `.env`, then add `TELEGRAM_BOT_TOKEN` (optional, enables alerts and PDF reports).
+4. Run `php artisan migrate --seed` (this runs `RolesAndPermissionsSeeder` and `UsersSeeder`).
+5. Daily reports: `php artisan reports:generate-daily` (schedule it in `routes/console.php`).
+
+Telegram alerts go to each user's `telegram_chat_id`, which is stored on the user record.
