@@ -4,7 +4,7 @@
 
 A comprehensive, enterprise-grade Inventory and Order Management System built with Laravel. Developed as a full-scale solution for IT Core Solutions (deployed at `ams.itcoresolutions.in`), this system handles complex manufacturing supply chains, dynamic product compositions, and automated reporting.
 
-## Core Features (Verified from Code)
+## Core Features
 
 - **Strict Role-Based Access Control (RBAC):** Utilizes Spatie Permissions with granular control (e.g., `permission:users.ownership.transfer`, `role:Super Admin`).
 - **Advanced Bill of Materials (BOM):** 
@@ -25,38 +25,10 @@ A comprehensive, enterprise-grade Inventory and Order Management System built wi
 - **Authentication:** Laravel Breeze
 - **Authorization:** Spatie Laravel-Permission
 - **Integrations:** Telegram Bot API (via Laravel HTTP Client)
+
+## Note
+
+This repository contains the application source code (controllers, models, services, migrations, views) of a client project deployed to production. Laravel scaffolding files (composer.json, artisan, package.json, .env.example) are not included, so it is not intended to be run directly from this repo.
 - **Frontend:** Blade Components, Tailwind CSS
 
-## Setup & Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/jafersathikbeta/Forge-Inventory.git
-   cd Forge-Inventory
-   ```
-
-2. Install PHP and Node dependencies:
-   ```bash
-   composer install
-   npm install && npm run build
-   ```
-
-3. Configure environment variables:
-   ```bash
-   cp .env.example .env
-   php artisan key:generate
-   ```
-   *Note: You will need to set your `DB_` credentials and `TELEGRAM_BOT_TOKEN` in the `.env` file.*
-
-4. Run database migrations and seeders (sets up roles, permissions, and admin user):
-   ```bash
-   php artisan migrate --seed
-   ```
-
-5. Start the local development server:
-   ```bash
-   php artisan serve
-   ```
-
-## License
-Developed for internal deployment at IT Core Solutions.
+ore Solutions.
